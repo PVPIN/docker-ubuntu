@@ -7,6 +7,7 @@ ENV REFRESHED_AT 20170103
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN sed -i.bak s/archive/cn.archive/g /etc/apt/sources.list && apt-get -y update
+RUN apt-get install locales
 
 RUN locale-gen en_US.UTF-8
 RUN locale-gen zh_CN.UTF-8
